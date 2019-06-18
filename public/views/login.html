@@ -1,0 +1,69 @@
+<% layout('layout') -%>
+
+	<!-- Tree BG image -->
+	<img src="img/medium.png" class="img-responsive">
+	<div class="text-block">
+	<div class="row">
+		<div class="col-sm-7">
+			<h1>A bank made for you. Feel the difference.</h1>
+			<button class="btn Open-Account" onclick="location.href='/registrationPage';">
+				<span class="GrayButtonText">Open an Account</span>
+			</button>
+		</div>
+		<div class="col-sm-5">
+			<div class="sign-in-box">
+				<p class="Online-Banking">Online banking made easy. <br>Sign in now.</p>
+				<br>
+				<input aria-describedby="basic-addon1" class="form-control Rectangle-5" placeholder="Username" type="text">
+				<input aria-describedby="basic-addon1" class="form-control Rectangle-5" placeholder="Password" type="text">
+				<br>
+				<label class="custom-control custom-checkbox">
+					<input class="custom-control-input" type="checkbox"> <span class="custom-control-indicator"></span>
+					<span class="custom-control-description">Save username</span>
+				</label>
+				<button class="btn Rectangle-7"><span class="GrayButtonText">Sign in</span></button>
+
+				<p></p>
+				<br>
+				<p class="Online-Banking">Or</p>
+	
+				<form action="/login" class="form" method="post">
+					<input aria-describedby="basic-addon1" class="form-control Rectangle-5" name="email" placeholder="Email" type="email"><br>
+					<button class="image-btn">
+						<img src="img/tk-signin2.png" class="img-responsive sign-in">
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<!-- DOCUMENT SIGNING -->
+	<!-- <div class="row text-center"> -->
+		<!--<br>
+		<button class="btn Rectangle-8 btn-success" onclick="location.href='/docSigPage';"><span class="GrayButtonText">Document Signing</span></button>-->
+	<!-- </div> -->
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="box">
+				<h3>Made for you. Here for your journey.</h3>
+				<hr>
+				<p>We know that everybody has different dreams and goals. So we’re here to help you with yours and build your financial strength along the way.</p>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="box">
+				<h3>Proud to serve.</h3>
+				<hr>
+				<p>Founded in 1955, we have more than 200,000 members and are here to serve the community. <b>We believe that people come first so that you feel the difference.</b></p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	     function login(){
+	     location.href='/login';
+	     }
+	</script>
+

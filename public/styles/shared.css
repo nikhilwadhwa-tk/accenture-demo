@@ -1,0 +1,17 @@
+.Welcome-to-your-account {
+  max-width: 387.9px;
+  height: 32px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2;
+  text-align: left;
+  color: #167c80;
+}
+
+.FormalText {
+  height: 18px;
+  font-family: ArialMT;
+  font-size: 16px;
+  text-align: left;
+  color: #4a4a4a;
+}

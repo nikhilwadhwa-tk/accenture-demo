@@ -1,0 +1,92 @@
+<% layout('layout') -%>
+
+<div class="header">
+<ul>
+	<li>
+		<a class="btn btn-link pull-right" onclick="logout();">
+			<span class="Sign-Out">Sign Out</span>
+		</a>
+	</li>
+	<li>
+		<a class="btn btn-link pull-right" onclick="deleteUser();">
+			<span class="deleteUser"><i class="fa fa-trash"></i> Delete User </span>
+		</a> 
+	</li>
+</ul>
+</div>
+
+<br>
+<div class="main-box">
+	<h3>Welcome to your account!</h3>
+	<div id="register-details">
+		<div class="col">
+			<label>Signed in as</label> 
+			<b><%= profile.email %></b>
+		</div>
+	</div>
+	<br>
+	<div class="col">
+	   <a href="" ng-click="showme= !showme" style="color: #32B67A; font-weight: bold;"><span>{{showme ? 'Show less' : 'Show more'}}</span></a>
+	</div>
+	<br>
+	<div ng-show="showme" style="padding-left: 20px;">
+		<label>First name</label> <b><%= profile.firstName %></b>
+		<label>Last name</label> <b><%= profile.lastName %></b>
+		<label>Date of Birth</label> <b><%= profile.birthDate %></b>
+		<label>Gender</label> <b><%= profile.gender %></b>
+		<label>Driver's License #</label> <b><%= profile.dlNumber %></b>
+	</div>
+</div>
+
+<div class="banking">
+	<h3>BANKING</h3>
+	<div id="register-details">
+		<label style="font-weight: 400;">Account Balance</label> 
+		<p 
+			style="background-color: #F7F7F7;
+				padding-top: 15px;
+				padding-left: 15px;
+				padding: 15px;
+				color: black;
+				font-weight: bold;
+				font-size: 20px;
+				max-width: 600px;">
+			$ <%= profile.accountBalance %>
+		</p>
+		
+		<label style="font-weight: 400;">Registered Credit Cards</label>
+		<ul style="background-color: #F7F7F7;
+			padding-top: 15px;
+			padding-left: 15px;
+			padding: 15px;
+			color: black;
+			font-weight: bold;
+			font-size: 20px;
+			max-width: 600px;">
+			<%profile.cards.forEach(function(card){ %>
+			<br>
+			<li>XXXX-<%= card.lastFourDigits %></li><%}) %>
+		</ul>
+	</div>
+	<br>
+</div>
+
+
+
+<!--<div class="col">
+        <label> Signed Credit Card Application </label> 
+ <a href="/docSig/<%= profile.creditCardApplication %>">link</a>       
+    </div>-->
+
+<script>
+       function deleteUser() {
+           $.get('/deleteUser', function (result) {
+               location.href = '/logout';
+           });
+
+       }
+
+       function logout() {
+           location.href = '/logout';
+       }
+</script>

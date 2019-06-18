@@ -1,0 +1,62 @@
+<% layout('layout') -%>
+
+ <script type="text/javascript">
+(function(){
+
+    function enableDisableSubmit(enable) {
+        var disable = document.getElementById('username').value == '' || document.getElementById('doc').value == '';
+        document.getElementById('request').disabled = (enable === false || disable);
+        return !disable;
+    }
+
+    function init() {
+
+        if (window.location.hash) {
+            document.getElementById('unknownuser').style.display = null;
+            document.getElementById('username-group').className += " has-error";
+            document.getElementById('username').value = window.location.hash.substr(9);
+        }
+
+        document.getElementById('username').focus();
+
+        document.getElementById('username').addEventListener('keyup', enableDisableSubmit);
+        document.getElementById('doc').addEventListener('change', enableDisableSubmit);
+        document.getElementById('form').addEventListener('submit', function(e) {
+            if (!enableDisableSubmit(false)) {
+                e.preventDefault();
+            }
+        });
+
+        enableDisableSubmit();
+    }
+
+    window.addEventListener('load', init);
+
+})();
+        </script>
+
+  <h4>DocSig&trade;</h4>
+<!--enctype="multipart/form-data"-->
+        <div id="formcontainer">
+            <div id="loginform">
+                <form id="form" enctype="multipart/form-data" method="post" action="/docSig/sign" > 
+                    <div class="form-group" id="username-group">
+                        <p>
+                            <div><label for="username">1. Enter the signatory</label></div>
+                            <input class="form-control" type="text" required name="username" id="username" placeholder="Enter email or ID"/>
+                            <span class="help-block" id="unknownuser" style="display: none;">Invalid signatory</span>
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <p>
+                            <div><label for="file">2. Choose a document</label></div>
+                            <input type="file" name="doc" id="doc" required accept="application/pdf,.pdf"/>
+                        </p>
+                    </div>
+                    <p>
+                        <div><label>3. Submit</label></div>
+                        <input type="submit" id="request" value="Request Signature" class="btn btn-success" disabled="disabled">
+                    </p>
+                </form>
+            </div>
+        </div>

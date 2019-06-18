@@ -1,0 +1,254 @@
+html, body {
+
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.logo {
+  height: 50px;
+  object-fit: contain;
+  display: table;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.container {
+  position: relative;
+}
+
+.text-block {
+  position: absolute;
+  /*top: 150px;*/
+  bottom: 330px;
+  color: white;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.text-block h1 {
+  font-size: 4vw;
+}
+
+.sign-in-box {
+  background-color: white;
+  padding: 30px;
+  padding-left: 30px;
+  border-radius: 4px;
+}
+
+.sign-in-box .image-btn {
+  padding: none;
+  margin: none;
+  border: none;
+  background-color: transparent;
+}
+
+.box {
+  background-color: #F7FAFA;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding: 10px 40px 30px 40px;
+  box-shadow: 3px 3px #176A6C;
+}
+
+.box h3 {
+  color: #2DAB67;
+}
+
+.box p {
+  font-size: 15px;
+}
+
+.box-thanks {
+  background-color: #F7FAFA;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-bottom: 60px;
+  padding: 10px 40px 30px 40px;
+  box-shadow: 3px 3px #176A6C;
+}
+
+.box-thanks p {
+  font-size: 15px;
+}
+
+.sign-in-box .sign-in {
+  max-width: 200px;
+  cursor: pointer;
+}
+
+/*
+.Rectangle-3 {
+  max-width: 481px;
+  padding-top: 50px;
+  border-radius: 3px;
+  background-color: #ffffff;
+}*/
+
+
+.GreenButton {
+  /*width: 70%;*/
+  max-width: 300px;
+  height: 40px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #167c80;
+}
+
+.certificate {
+  max-width: 800px;
+}
+
+/*On Verify page*/
+.TKButtonVerify {
+  width: 70%;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #037cf5;
+}
+
+.Verify-Identity {
+  width: 171px;
+  height: 18px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue' sans-serif;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.FormalText {
+  height: 18px;
+  font-family: ArialMT;
+  font-size: 16px;
+  text-align: left;
+  color: #4a4a4a;
+}
+
+.LargerText{
+  height: 18px;
+  font-family: ArialMT;
+  font-size: 16px;
+}
+
+.SuccessText {
+  width: 387.9px;
+  height: 32px;
+  font-family: Comfortaa;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 2;
+  text-align: center;
+  color: #167c80;
+}
+
+.SuccessCheck{
+  width: 74px;
+  height: 68.8px;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+/*main css above. May need to be moved.*/
+
+.Online-Banking {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: #167c80;
+}
+
+.Rectangle-5 {
+  height: 41px;
+  
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 0.5px #979797;
+}
+
+/*.Forgot-your-username {
+  height: 11px;
+  font-family: ArialMT;
+  font-size: 10px;
+  text-align: right;
+  color: #0bbcd6;
+}*/
+
+.Rectangle-7 {
+  /*width: 30%;*/
+  /*height: 40px;*/
+  padding: 10px 20px 10px 20px;
+  border-radius: 2px;
+  background-color: #9b9b9b;
+}
+
+.Open-Account {
+  /*width: 100%;*/
+  height: 49px;
+  border-radius: 2px;
+  background-color: #167c80;
+}
+
+.Rectangle-8 {
+  width: 100%;
+  height: 49px;
+  border-radius: 2px;
+  background-color: #26bf37;
+}
+
+.TKButton {
+  width: 100%;
+  height: 50px;
+  border-radius: 2px;
+  background-color: #037cf5;
+}
+
+.White {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+
+}
+
+.GrayButtonText {
+  width: 47px;
+  height: 32px;
+  font-family: 'Helvetica Neue' sans-serif;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 17px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* If the screen size is 900px or less */
+@media only screen and (max-width: 1000px) {
+  .text-block {
+    position: relative;
+    bottom: 0px;
+    color: #2DAB67;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sign-in-box {
+    background-color: #167c80;
+    margin-top: 20px;
+    color: white;
+  }
+
+  .Online-Banking {
+    color: white;
+  }
+
+}
